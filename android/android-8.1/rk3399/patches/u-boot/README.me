@@ -1,0 +1,7 @@
+rk3399 box 8.1: 4K 60Hz播放闪绿条纹问题。
+
+这个问题需要修改0xffa84010寄存器的值不为0x80xxx。因为这个值不是通用的所以不合并到主分支通过补丁来提供。
+客户有需要，可以找陈有敏帮忙修改bl31.elf文件。然后根据rkbin/RKTRUST/RK3399TRUST.ini找到文件的位置替换即可
+验证：io -4 -r 0xffa84010
+
+redmine:https://redmine.rockchip.com.cn/issues/196123

@@ -1,0 +1,15 @@
+diff --git a/core/java/android/view/ViewRootImpl.java b/core/java/android/view/ViewRootImpl.java
+index 4089767..97d99a1 100644
+--- a/core/java/android/view/ViewRootImpl.java
++++ b/core/java/android/view/ViewRootImpl.java
+@@ -4508,6 +4508,10 @@ public final class ViewRootImpl implements ViewParent,
+                     && !isAutofillUiShowing()) || mStopped
+                     || (mIsAmbientMode && !q.mEvent.isFromSource(InputDevice.SOURCE_CLASS_BUTTON))
+                     || (mPausedForTransition && !isBack(q.mEvent))) {
++                //some application draws the view by itself and occured focus error, return false to void
++                if(mContext.getPackageName().contains("com.dangbeimarket")){
++                    return false;
++                }
+                 // This is a focus event and the window doesn't currently have input focus or
+                 // has stopped. This could be an event that came back from the previous stage
+                 // but the window has lost focus or stopped in the meantime.

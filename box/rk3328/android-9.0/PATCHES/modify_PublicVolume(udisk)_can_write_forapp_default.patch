@@ -1,0 +1,12 @@
+diff --git a/model/PublicVolume.cpp b/model/PublicVolume.cpp
+index 21d5ce1..c7af497 100755
+--- a/model/PublicVolume.cpp
++++ b/model/PublicVolume.cpp
+@@ -249,6 +249,7 @@ status_t PublicVolume::doMount() {
+                     "-u", "1023", // AID_MEDIA_RW
+                     "-g", "1023", // AID_MEDIA_RW
+                     "-U", std::to_string(getMountUserId()).c_str(),
++                    "-w",
+                     mRawPath.c_str(),
+                     stableName.c_str(),
+                     NULL)) {

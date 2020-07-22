@@ -1,0 +1,13 @@
+diff --git a/tv/overlay/frameworks/base/core/res/res/values/config.xml b/tv/overlay/frameworks/base/core/res/res/values/config.xml
+index 20dc349..5544ca6 100755
+--- a/tv/overlay/frameworks/base/core/res/res/values/config.xml
++++ b/tv/overlay/frameworks/base/core/res/res/values/config.xml
+@@ -35,7 +35,7 @@
+              4  UI_MODE_TYPE_TELEVISION
+              5  UI_MODE_TYPE_APPLIANCE
+          Any other values will have surprising consequences. -->
+-    <integer name="config_defaultUiModeType">4</integer>
++    <integer name="config_defaultUiModeType">1</integer>
+ 
+     <!-- Control the behavior when the user long presses the home button.
+             0 - Nothing
